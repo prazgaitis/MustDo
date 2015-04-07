@@ -1,0 +1,29 @@
+<h1>Listing mustdo_lists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Category</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mustdo_lists.each do |mustdo_list| %>
+      <tr>
+        <td><%= mustdo_list.title %></td>
+        <td><%= mustdo_list.category %></td>
+        <td><%= mustdo_list.description %></td>
+        <td><%= link_to 'Show', mustdo_list %></td>
+        <td><%= link_to 'Edit', edit_mustdo_list_path(mustdo_list) %></td>
+        <td><%= link_to 'Destroy', mustdo_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mustdo list', new_mustdo_list_path %>

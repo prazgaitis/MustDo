@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @mustdo_list.title %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @mustdo_list.category %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @mustdo_list.description %>
+</p>
+
+<%= link_to 'Edit', edit_mustdo_list_path(@mustdo_list) %> |
+<%= link_to 'Back', mustdo_lists_path %>
