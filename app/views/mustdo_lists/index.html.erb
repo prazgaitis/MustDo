@@ -12,7 +12,7 @@
 
   <tbody>
     <% @mustdo_lists.each do |mustdo_list| %>
-      <tr>
+      <tr id="<%= dom_id(mustdo_list) %>">
         <td><%= mustdo_list.title %></td>
         <td><%= mustdo_list.category %></td>
         <td><%= mustdo_list.description %></td>
