@@ -23,7 +23,7 @@ describe MustdoListsController do
   # This should return the minimal set of attributes required to create a valid
   # MustdoList. As you add validations to MustdoList, be sure to
   # adjust the attributes here as well.
-  let(:valid_attributes) { { "title" => "MyString" } }
+  let(:valid_attributes) { { "title" => "MyString", "category" => "Restaurants", "description" => "My Description" } }
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
