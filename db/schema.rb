@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150407042917) do
+ActiveRecord::Schema.define(version: 20150418221017) do
+
+  create_table "mustdo_items", force: true do |t|
+    t.integer  "mustdo_list_id"
+    t.string   "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "mustdo_items", ["mustdo_list_id"], name: "index_mustdo_items_on_mustdo_list_id"
 
   create_table "mustdo_lists", force: true do |t|
     t.string   "title"
